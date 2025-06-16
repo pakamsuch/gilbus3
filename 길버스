@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>길버스 지도</title>
+  <style>
+    #map { width: 100%; height: 500px; }
+  </style>
+  <script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=2cba6d0255919c89eced3d40f28160e0"></script>
+</head>
+<body>
+  <h2>길버스 지도</h2>
+  <div id="map"></div>
+
+  <script>
+    const mapContainer = document.getElementById('map');
+    const mapOption = {
+      center: new kakao.maps.LatLng(37.3784, 127.1144), // 분당 중심
+      level: 4
+    };
+    const map = new kakao.maps.Map(mapContainer, mapOption);
+  </script>
+</body>
+</html>
